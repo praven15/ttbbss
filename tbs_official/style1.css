@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html,body{
+	height: 100%;
+	width:100%;
+	font-family:poppins,san-sarif;
+	
+}
+
+.navbar{
+  background: rgba(0, 0, 0, 0.9);
+
+}
+
+
+
+.nav-link {
+	font-size:1.1em !important;
+	 transition:0.3s ease;
+	  margin: 0 10px;
+	  padding:20px 0 ;
+}
+
+.nav-link:hover{
+	border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+	padding:10px 0;
+}
+
+
+.display-5 {
+	font-family:poppins;
+	font-size:2.2em !important;
+}
+
+
+.welcome{
+	margin:50px 50px;
+}
+.imagegallery{
+	margin:0;
+}
+.teamtbs{
+	background-color:black;
+	
+}
+.our-team{border:2px solid #ff3232;
+border-radius:10px;
+text-align:center;
+margin:10px;
+z-index:1;
+position:relative;
+}
+.our-team:before,
+.our-team:after{
+	content: "";
+	width: 100%;
+	height:104%;
+	background: #ff3232;
+	position: absolute;
+	top:50%;
+	left:0;
+	z-index: -1;
+	transform: translateY(-50%) scaleX(0.3);
+	transition: all 0.3s ease 0s;
+}
+.our-team:after{
+	width:106%;
+	left:50%;
+	transform: translate(-50%,-50%) scaleY(0.25);
+}
+
+.our-team:hover:before{ transform: translateY(-50%) scaleX(0.7); }
+.our-team:hover:after{ transform: translate(-50%, -50%) scaleY(0.7); }
+.our-team img{
+	width: 100%;
+	height: auto;
+	border-radius:: 10px;
+	transition: all 0.3s ease 0s;
+}
+.our-team .team-content{
+	width: 93%;
+	padding:25px 0 10px;
+	background #ff4444;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	opacity: 0;
+	-webkit-clip-path:polygon(0% 15% 15% 15% 15% 0% 85% 0% 85% 15% 100% 15% 100% 85% 85% 85% 85% 100% 15% 100% 15% 85% 0% 85%);
+	clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+	transform:translateX(-50%);
+	transition:all 0.3s cubic-bezier(0.5, 0.2,0.1,0.9);
+}
+.our-team:hover .team-content{
+	bottom:10px;
+	opacity:1;
+}
+.our-team .title{
+	font-size:25px;
+	font-weight:600;
+	color:#fff;
+	letter-spacing:1px;
+	text-transform: capitalize;
+	margin: 0;
+}
+.our-team .post{
+	display:block;
+	font-size 16px;
+	color: #fff;
+	text-transform:uppercase;
+	margin-bottom: 10px;
+}
+.our-team .social{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.our-team .social li{
+	display:inline-block;
+	margin: 0 5px;
+}
+
+.our-team .social li a{
+	display:block;
+	width: 35px;
+	height:35px;
+	line-height:35px;
+	border-radius:50%;
+	background:#fff;
+	font-size:20px;
+	color:#ff3232;
+}
+.our-team .social li a:hover{
+	background:linear-gradient(to bottom,#ff3232, darkred);
+	box-shadow:0 0 0 5px rgba(255,255,255,0.3);
+	color:#fff;
+}
+
+@media only screen and (max-width:990px){
+	.our-team{
+		margin-bottom
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
